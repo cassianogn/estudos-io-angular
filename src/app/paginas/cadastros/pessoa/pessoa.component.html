@@ -1,0 +1,15 @@
+<h2>Pessoas</h2>
+<a [routerLink]="['registrar']">Nova pessoa</a>
+
+<table class="tabela-estudo">
+  <tr>
+    <th>Id</th>
+    <th>Nome</th>
+    <td></td>
+  </tr>
+  <tr *ngFor="let pessoa of pessoas" >
+    <td>{{pessoa.id}} </td>
+    <td> {{pessoa.nome}} </td>
+    <td> <a [routerLink]="['editar/'+pessoa.id]">editar</a> </td>
+  </tr>
+</table>

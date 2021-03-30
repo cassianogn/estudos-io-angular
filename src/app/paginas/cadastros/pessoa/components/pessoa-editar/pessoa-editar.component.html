@@ -1,0 +1,19 @@
+<h2>Editar nova pessoa</h2>
+<div style="color: red">
+<p *ngFor="let erro of erros" > {{erro}} </p>
+</div>
+<form [formGroup]="formGroup">
+  <table>
+    <tr>
+      <td>Nome </td>
+      <td><input type="text" formControlName="nome" /></td>
+    </tr>
+    <tr>
+      <td>Telefone </td>
+      <td><input type="text" formControlName="telefone" /></td>
+    </tr>
+    <tr>
+      <td colspan="2"> <button (click)="submeter()" >Editar</button> </td>
+    </tr>
+  </table>
+</form>
